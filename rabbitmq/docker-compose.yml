@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  rabbitmq:
+    build: .
+    ports:
+     - 4369:4369
+     - 5672:5672
+     - 15672:15672
+     - 25672:25672
+    networks:
+      - high_security
+      
+networks:
+  high_security:
